@@ -6,34 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Wide Web</title>
     <link rel="stylesheet" href="./default.css">
-    <style>
-        button{
-            padding:10px 20px;
-            font-weight:bold;
-            font-size:20px;
-            position:absolute;
-            left:200px;
-            top:24px;
-        }
-    </style>
+   
 </head>
 <body>
     <h1>WEB</h1>
     <button onclick="
-        let linkText = document.querySelectorAll('a');
-
-        linkText[0].style.color = 'lightblue';
-        linkText[1].style.color = 'lightblue';
-        linkText[2].style.color = 'lightblue';
-
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('h1').style.color = 'white';
-        document.querySelector('h1').style.borderBottom = '5px solid white';
-        document.querySelector('ol').style.color = 'white';
-        document.querySelector('h2').style.color = 'white';
-        document.querySelector('p').style.color = 'white';
-        document.querySelector('div').style.borderLeft = '5px solid white';
+        // let btnMod = document.querySelector('button');
+        if(this.innerText == 'dark'){
+            darkMode();
+            this.innerText = 'light';
+        }else{
+            lightMode();
+            this.innerText = 'dark';
+        }
     ">dark</button>
+    <!-- <button onclick="lightMode();">light</button> -->
     <ol>
         <li><a href="./html.html">HTML</a></li>
         <li><a href="./css.html">CSS</a></li>
@@ -50,5 +37,7 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptatibus? Enim, molestias. Illo inventore nostrum doloremque saepe laboriosam accusantium porro beatae magnam dolor voluptatem! Molestias nam alias omnis a ipsa.
         </p>
     </div>
+
+    <script src="./dark-light.js"></script>    
 </body>
 </html>

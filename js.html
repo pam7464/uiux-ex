@@ -10,6 +10,16 @@
 </head>
 <body>
     <h1>WEB</h1>
+    <button onclick="
+        // let btnMod = document.querySelector('button');
+        if(this.innerText == 'dark'){
+            darkMode();
+            this.innerText = 'light';
+        }else{
+            lightMode();
+            this.innerText = 'dark';
+        }
+    ">dark</button>
     <ol>
         <li><a href="./html.html">HTML</a></li>
         <li><a href="./css.html">CSS</a></li>
@@ -26,5 +36,6 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, voluptatibus? Enim, molestias. Illo inventore nostrum doloremque saepe laboriosam accusantium porro beatae magnam dolor voluptatem! Molestias nam alias omnis a ipsa.
         </p>
     </div>
+    <script src="./dark-light.js"></script>
 </body>
 </html>
