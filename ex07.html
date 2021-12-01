@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형(Responsive)</title>
+    <style>
+        /* 모바일용 스타일 */
+        div{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            text-align:center;
+            line-height:300px;
+            transition:0.5s;
+        }
+        div#box01{
+            background-color:red;
+        }
+        div#box02{
+            background-color:green;
+        }
+        div#box03{
+            background-color:blue;
+        }
+
+        /* 테블릿 스타일 */
+        @media (min-width:768px){
+            div{
+                float:left;
+            }
+        }
+        /* 데스크탑 스타일 */
+        @media (min-width:1200px){
+            div{
+                width:360px;
+                height:360px;
+            }
+            div#box01{
+                background-color:black;
+            }
+            div#box02{
+                opacity:0;
+            }
+            div#box03{
+                border-radius:50%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box01">BOX01</div>
+    <div id="box02">BOX02</div>
+    <div id="box03">BOX03</div>
+</body>
+</html>
