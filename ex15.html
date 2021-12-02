@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표2(Table2)</title>
+    <style>
+        h1{text-align:center;}
+        table{
+            border-collapse:collapse;
+            margin:0 auto;
+        }
+        th{
+            border:1px solid black;
+            width:100px;
+            background-color:lightgray;
+        }
+        td{
+            border:1px solid black; 
+            width:100px; 
+            text-align:center;
+        }
+        tfoot td{
+            border:1px solid black;
+            width:100px;
+            background-color:lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>성적표</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>성명</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>60</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>이몽룡</td>
+                <td>80</td>
+                <td>80</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>성춘향</td>
+                <td>60</td>
+                <td>75</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>월매</td>
+                <td>80</td>
+                <td>60</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>변사또</td>
+                <td>75</td>
+                <td>45</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>합계</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
