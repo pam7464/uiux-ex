@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양식6(textarea,progress...)</title>
+</head>
+<body>
+    <h1>양식6(textarea,progress...)</h1>
+    <form>
+        <fieldset>
+            <legend>게시판</legend>
+            <label>작성자 <input type="text"></label>
+            <br>
+            <label>작성일 <input type="text"></label>
+            <br>
+            <label>제 &nbsp;목 <input type="text" size="60"></label>
+            <br>
+            <label>
+                내용<br>
+                <textarea cols="150" rows="10"></textarea>
+            </label>
+            <br>
+            <button type="submit">게시하기</button>
+            <button type="reset">취소하기</button>
+        </fieldset>
+            <progress value="0" max="100"></progress>
+            <script>
+                let docPro = document.querySelector('progress');
+                console.log(docPro.value);
+                setInterval(function(){
+                    ++docPro.value;
+                },10);
+            </script>
+
+    </form>
+</body>
+</html>
