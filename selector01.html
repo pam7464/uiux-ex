@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자(selector)</title>
+    <style>
+        /* 클래스선택자 */
+        .box{color:blue;}
+        /* 아이디선택자 */
+        #box{color:cyan;}
+        /* 태그선택자 */
+        div{color:green;}
+        li{color:blue;}
+        /* 모든선택자 */
+        *{color:red;}
+
+        /* 자손선택자 */
+        li li{color:yellow;}
+        ul ul li{color:darkcyan;}
+        #edit li{color:black;}
+        .edit li{color:white;}
+        ul .edit li{color:darkgreen;}
+
+        /* 그룹선택자 */
+        h1,#box{
+            font-size:30px;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자(selector)</h1>    
+    <div class="box" id="box" style="color:magenta;">박스1</div>
+    <div>박스2</div>
+    <div class="box">박스3</div>
+
+    <nav>
+        <ul>
+            <li>
+                파일
+                <ul>
+                    <li>새로만들기</li>
+                    <li>열기</li>
+                    <li>저장</li>
+                    <li>다른이름으로 저장</li>
+                    <li>종료</li>
+                </ul>
+            </li>
+            <li id="edit" class="edit">
+                편집
+                <ul>
+                    <li>복사</li>
+                    <li>잘라내기</li>
+                    <li>붙여넣기</li>
+                    <li>찾기</li>
+                </ul>
+            </li>
+            <li>
+                선택 영역
+                <ul>
+                    <li>선택반전</li>
+                    <li>선택해제</li>
+                </ul>
+            </li>
+            <li>
+                보기
+                <ul>
+                    <li>미리보기</li>
+                    <li>확대보기</li>
+                    <li>축소보기</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+</body>
+</html>

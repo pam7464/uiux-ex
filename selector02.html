@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자2</title>
+    <style>
+        /* 자식선택자 */
+        #box>div>div>div{color:red;}
+        #box>div>div>div>div{color:black;}
+
+        li{border:2px solid black;}
+
+        /* 다음동생선택자 */
+        #list03,#list03+li{border-color:red;}
+        #list03+li+li{border-color:green;}
+
+        /* 동생들선택자 */
+        #list06~li{border-color:blue;}
+
+        #list03~li{color:cyan;}
+        #list09,#list09+li{color:black !important;}
+
+        /* 동일한 엘리먼트 반복적으로 배치 원하는 위치를 선택 */
+        #list li:first-child{color:red;}
+        #list li:last-child{color:red;}
+        #list li:nth-child(5){color:green;}
+        #list li:nth-child(1){color:green;}
+        #list li:nth-child(2n){border-color:blue;}
+        #list li:nth-child(2n+1){border-color:cyan;}
+        #list li:nth-child(3n){color:red;}
+
+        #par-box *{
+            font-weight:400;
+            font-size:20px;
+            margin:0;
+        }
+
+        /* 동일하지 않은 엘리먼트중 원하는 위치를 선택 */
+        #par-box>div:first-of-type{color:red;}
+        #par-box>div:nth-of-type(3){color:red;}
+        #par-box>*:nth-child(3){color:white;}
+        /* #par-box>*:nth-of-type(5){color:white;} */
+
+        .array-box{width:100px;height:60px;}
+        /* 하위요소를 전혀 가지지 않은 선택자 */
+        .array-box:empty{background-color:red;}
+
+        .array-box>div:only-child{
+            display:none;
+        }
+
+        body>div:not(.array-box){
+            font-size:50px;
+            color:darkolivegreen;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자2</h1>
+    <div id="box">
+        박스
+        <div>
+            자식박스
+            <div>
+                손자박스
+                <div>
+                    증손자박스
+                    <div>
+                        고손자박스
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li id="list03">목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+        <li id="list06">목록6</li>
+        <li>목록7</li>
+        <li>목록8</li>
+        <li id="list09">목록9</li>
+        <li>목록10</li>
+    </ul>
+
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+    </ul>
+
+    <div id="par-box">
+        <p>child00</p>
+        <div>child01</div>        
+        <div>child02</div>
+        <div>child03</div>
+        <h3>child04</h3>
+        <div>child05</div>
+        <div>child06</div>
+    </div>
+
+    <div class="array-box">
+        <div>1-1</div>
+        <div>1-2</div>
+        <div>1-3</div>
+    </div>
+    <div class="array-box">
+        <div>
+            <div>
+                <div>2-1-1-1</div>
+            </div>
+        </div>
+    </div>
+    <div class="array-box"></div>
+    <div class="array-box">
+        <div>4-1</div>
+    </div>
+</body>
+</html>
