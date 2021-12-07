@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        /* 루트선택자 */
+        :root{font-size:14px;}
+        /* 방문한 적이 없는 링크 */
+        a:link{color:red;}
+        h1:link{color:red;}
+        /* 방문 이력이 있는 링크 */
+        a:visited{color:green;}
+        h1:visited{color:green;}
+        /* 마우스 오버 */
+        a:hover{color:blue;}
+        h1:hover{color:red;}
+        /* 마우스 누룰때 */
+        a:active{color:cyan;}
+        h1:active{color:cyan;}
+
+        /* 포커스  */
+        :focus{
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상 클래스 선택자</h1>
+    <a href="https://www.daoom.com">다음</a>
+    <a href="https://www.naber.net">네이버</a>
+    <input type="text">
+</body>
+</html>

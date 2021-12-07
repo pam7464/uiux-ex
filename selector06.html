@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자6</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        a{
+            margin:50px;
+            text-decoration:none;
+            font-size:24px;
+            color:red;
+        }
+        a:hover{
+            color:green;
+        }
+        div,section::before,section::after{
+            height:500px;
+            margin:50px;
+            font-size:100px;            
+            text-align:center;
+            line-height:500px;
+        }
+        div:nth-child(1){
+            background-color:red;
+        }
+        div:nth-child(2){
+            background-color:green;
+        }
+        div:nth-child(3){
+            background-color:blue;
+        }        
+        /* 타겟선택자 */
+       :target{
+            background-color:cyan;
+        }
+
+        /* 가상요소선택자 */
+        section::before{
+            content:'박스00';
+            display:block;
+            background-color:yellow;
+        }
+        section::after{
+            content:'box04';
+            display:block;
+            background-color:black;
+            color:white;
+        }
+        p{
+            color:green;
+        }
+        p::first-letter{
+            font-size:200px;
+        }
+        p::first-line{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자6</h1>
+    <a href="#box01">box01</a>
+    <a href="#box02">box02</a>
+    <a href="#box03">box03</a>
+    <section>        
+        <div id="box01">박스1</div>
+        <div id="box02">박스2</div>
+        <div id="box03">박스3</div>        
+    </section>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptates sit, ex, temporibus suscipit qui fuga sint enim, quas provident delectus alias tempore totam possimus eveniet soluta iusto ut necessitatibus.
+        Quos molestias unde, totam assumenda autem consectetur harum neque tempora quod nemo magni vero veniam natus maiores adipisci atque doloribus at! Magni vitae ipsum, nihil facere atque quam illo temporibus!
+        Quaerat ea, exercitationem at assumenda eligendi ipsum eius officiis vitae culpa a commodi? Accusantium laudantium dicta sed dolorem eaque expedita exercitationem maxime minima, dolorum impedit laboriosam a modi, incidunt iusto!
+        Ut facilis impedit corrupti dolores rerum quae voluptatem tempore nostrum qui! Tenetur quaerat laborum sunt? Numquam laborum quis, culpa modi, eveniet quaerat ipsam delectus commodi animi vitae dolore, autem ad.
+        Ex harum consequatur odit qui repudiandae laborum ut delectus a quidem mollitia neque, quibusdam error sapiente accusamus enim inventore. Beatae consectetur iste quibusdam aperiam, quod voluptas ab ipsum voluptates quam.
+        At nostrum reiciendis numquam atque non iure, culpa sequi placeat recusandae ullam, optio dolorum possimus harum impedit tenetur illo nesciunt repellat distinctio deleniti sapiente. Deserunt hic quam ex laborum error.
+        Sed amet accusamus a tenetur tempora quod eius cupiditate! Minima quasi quod iusto veniam eligendi officiis impedit tenetur commodi quas repudiandae, sequi explicabo eos aliquid illo quaerat iste, iure animi!
+        Obcaecati hic, aut ducimus natus architecto praesentium porro, expedita dolor accusamus quas veritatis quis facilis quibusdam similique iusto cum, optio explicabo. Cumque et mollitia, aperiam deleniti quaerat itaque quis modi?
+        Quisquam magni quas, repellat doloribus, quaerat, iusto laudantium vero consequuntur commodi culpa totam saepe repudiandae dolorem? Molestias explicabo deleniti magni, debitis repudiandae quos expedita totam alias eaque, ipsum, officiis nesciunt!
+        Beatae non harum facere id labore porro nam sit blanditiis. Libero exercitationem laudantium repellat mollitia possimus veniam, dolor delectus perspiciatis illo voluptatem at blanditiis impedit nemo minima vitae pariatur deleniti!
+</p>
+</body>
+</html>
