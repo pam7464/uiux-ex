@@ -7,22 +7,54 @@
     <link rel="shortcut icon" href="./images/theborn.png" type="image/x-icon">
     <title>더본코리아</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            text-decoration:none;
+            color:#333;
+        }
+        img{
+            width:100%;
+        }
+        
         .header{
-            background:red;
+            box-shadow:0 2px 2px rgba(0,0,0,0.3);
         }
         .container{
-            width:1200px;
-            height:50px;
-            margin:0 auto;
-            background:green;
+            width:960px;
+            margin:0 auto;            
+            padding:30px 0;
+        }
+        .container:hover{
+            border-bottom:1px solid #a73232;
+        }
+        .main-logo,.nav,.nav li{
+            display:inline-block;
+        }
+        .main-logo{            
+            margin-right:100px;
+        }
+        .nav li{
+            margin:0 10px;
+            font-weight:600;
+            font-size:15px;
+        }
+        .nav a:hover{
+            color:#a73232;
         }
     </style>
 </head>
 <body>
     <section class="wrap">
-        <header class="header">
-            <div class="container">
-                <h1 class="main-logo">로고</h1>
+        <header class="header" id="header">
+            <div class="container" id="container">
+                <h1 class="main-logo">
+                    <a href="#">
+                        로고
+                    </a>
+                </h1>
                 <nav class="nav">
                     <ul>
                         <li><a href="#">더본코리아</a></li>
@@ -36,5 +68,16 @@
             </div>
         </header>
     </section>
+    
+    <script>
+        let tmp = document.getElementById('header');
+        let tmp2 = document.getElementById('container');
+        tmp2.addEventListener('mouseover',function(){
+            tmp.style.boxShadow='none';
+        })
+        tmp2.addEventListener('mouseout',function(){
+            tmp.style.boxShadow='0 2px 2px rgba(0,0,0,0.3)';
+        })
+    </script>
 </body>
 </html>
