@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경스타일2</title>
+    <style>
+        h1{text-align: center;}
+        .box{
+            box-sizing:border-box;
+            height:800px;
+            margin:20px;
+            border:1px solid black;            
+        }
+        #box01{
+            background-image:url(./images/coffee.gif);
+            background-repeat:no-repeat;
+            background-position-x:center;
+            background-position-y:center;
+            background-size:contain;
+        }
+        #box02{
+            background-image:url(./images/coffee2.svg);
+            background-repeat:no-repeat;
+            background-position:right center;
+            background-size:cover;
+        }
+        #box03{
+            background-image:url(./images/coffee3.png);
+            background-repeat:no-repeat;
+            background-position:right bottom;
+            background-size:contain;
+        }
+        #box04{
+            /* background-image:url(./images/coffee4.jpg); */
+            /* background-repeat:no-repeat; */
+            /* background-position:center top; */
+            background:url(./images/coffee4.jpg) no-repeat center;
+            background-size:cover;
+        }
+
+        #box05,#box06,#box07{
+            border:20px dashed black;
+            padding:50px;
+        }
+        #box05{
+            background:url(./images/img-html.jpg) no-repeat center/cover border-box;            
+        }
+        #box06{
+            background:url(./images/img-css.jpg) no-repeat center/cover padding-box;
+            /* background-origin: padding-box; */
+        }
+        #box07{
+            background:url(./images/img-javascript.jpg) no-repeat center/cover content-box;
+            /* background-origin: content-box; */
+        }
+    </style>
+</head>
+<body>
+    <h1>배경스타일2</h1>
+    <div class="box" id="box01"></div>
+    <div class="box" id="box02"></div>
+    <div class="box" id="box03"></div>
+    <div class="box" id="box04"></div>
+    <div class="box" id="box05"></div>
+    <div class="box" id="box06"></div>
+    <div class="box" id="box07"></div>
+    <div class="box" id="box08"></div>
+    <div class="box" id="box09"></div>
+    <div class="box" id="box10"></div>
+</body>
+</html>
