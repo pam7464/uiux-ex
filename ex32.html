@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>배경스타일2</title>
     <style>
-        h1{text-align: center;}
+        h1{display:-webkit-flex}
         .box{
             box-sizing:border-box;
             height:800px;
@@ -54,6 +54,18 @@
         #box07{
             background:url(./images/img-javascript.jpg) no-repeat center/cover content-box;
             /* background-origin: content-box; */
+        }
+        #box08{
+            background:#f00 url(./images/rocket.svg) no-repeat center/contain;
+        }
+        #box09{
+            background:url(./images/coffee4.jpg) no-repeat center/cover;
+            background-attachment:fixed;
+
+        }
+        #box10{
+            background:url(./images/coffee3.png) no-repeat center/cover fixed;
+            /* background-attachment:fixed; */
         }
     </style>
 </head>
