@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인박스</title>
+    <style>
+        .box{width:300px;height:300px;margin:0;display:inline-block;}
+        .box01{background:red;}
+        .box02{background:green;}
+        .box03{background:blue;}
+
+        .par-box{
+            width:900px;
+            height:300px;
+            margin:50px auto;
+            border:1px solid black;
+            padding:20px;
+        }
+        .child-box{
+            display:inline-block;
+            width:300px;
+            height:300px;
+        }
+
+        .child-box01{background:red;}
+        .child-box02{background:green;}
+        .child-box03{background:blue;}
+    </style>
+</head>
+<body>
+    <h1>인라인박스</h1>
+    <div class="box box01">박스1</div>
+    <div class="box box02">박스2</div>
+    <div class="box box03">박스3</div>
+
+    <div class="par-box">
+        <div class="child-box child-box01"></div>
+        <div class="child-box child-box02"></div>
+        <div class="child-box child-box03"></div>
+    </div>
+</body>
+</html>

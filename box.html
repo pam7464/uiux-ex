@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background:cornsilk;}
+        .box{
+           box-sizing:border-box;
+           width:500px;
+           height:500px;
+           /* margin-top:20px; */
+           /* margin-right:30px; */
+           /* margin-bottom:40px; */
+           /* margin-left:50px; */
+           margin:20px 30px 40px 50px;
+           /* border-top-width:10px; */
+           /* border-top-style:solid; */
+           /* border-top-color:black; */
+           border-top:10px solid black;
+           border-right:20px dotted red;
+           border-bottom:30px dashed green;
+           border-left:40px double blue;
+
+           /* padding-top:20px; */
+           /* padding-right:30px; */
+           /* padding-bottom:40px; */
+           /* padding-left:50px; */
+           padding:20px 30px 40px 50px;
+
+            margin:0 auto;
+            border:10px solid black;
+            padding:50px;
+            background:red content-box;
+
+        }
+        .box02{
+            box-sizing:border-box;           
+            width:100px;
+            height:100px;
+            margin:20px auto;
+            border-top:50px solid transparent;
+            border-right:50px solid green;
+            border-bottom:50px solid green;
+            border-left:50px solid transparent;
+        }
+        .box03{
+            box-sizing:border-box;
+            width:300px;
+            height:300px;
+            margin:50px auto;
+            border:50px solid black;
+            padding:50px;
+
+            border-radius:150px;
+            outline:50px solid red;
+            outline-offset:50px;
+
+            background:green content-box;
+        }
+        .box04{
+            box-sizing:border-box;
+            width:500px;
+            height:1500px;
+            margin:150px auto;
+            border:1px solid black;
+            padding:20px;
+        }
+        .box04>div{
+            box-sizing:border-box;
+            width:?;
+            height:?;
+        }
+        .box04-01{background:red;}
+        .box04-02{background:green;}
+        .box04-03{background:blue;}
+        .box04>div{
+            box-sizing:border-box;
+            width:456px;
+            height:485.3333333333333px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>  
+    <div class="box04">
+        <div class="box04-01"></div>
+        <div class="box04-02"></div>
+        <div class="box04-03"></div>
+    </div>  
+</body>
+</html>
