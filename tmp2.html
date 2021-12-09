@@ -4,30 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원 가입</title>
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;margin:0;padding:0;}
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .wrap{
+            width:1000px;
+            margin:0 auto;
+        }
+        .header{
+            
+            padding:20px;
+            background:#666;
+            font-weight:700;
+            font-size:32px;
+            color:#fff;
+        }        
+        .main>*{float:left;padding:20px;height:500px;}
+        .main .aside{width:25%;background:#999;}
+        .main .section{width:50%;background:#aaa;}
+        .footer{padding:20px;background:#888;}
+    </style>
 </head>
 <body>
-    <div style="width:600px;margin:0 auto;">
-        <h1>회원 가입을 환영합니다</h1>
-        <form>
-            <fieldset>
-                <legend>사용자 정보</legend>
-                <ul>
-                    <li><label>아이디 <input type="text"></label></li>
-                    <li><label>이메일 <input type="email"></label></li>
-                    <li><label>비밀번호 <input type="password"></label></li>
-                    <li><label>비밀번호 확인 <input type="password"></label></li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>이벤트와 새로운 소식</legend>
-                <label><input type="radio" name="mail"> 메일 수신</label>
-                <label><input type="radio" name="mail"> 메일 수신 안 함</label>
-            </fieldset>
-            <input type="submit" value="가입하기">
-            <input type="reset" value="취소">
-        </form>
-    
-    </div>
+    <div class="wrap">
+        <header class="header">
+            사이트제목
+        </header>
+        <main class="main clearfix">
+            <aside class="aside">
+                사이드바1
+            </aside>
+            <section class="section">
+                본문
+            </section>
+            <aside class="aside">
+                사이드바2
+            </aside>
+        </main>
+        <footer class="footer">
+            주소
+        </footer>
+    </div>    
 </body>
 </html>

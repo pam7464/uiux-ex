@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션(position)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            /* 브라우저기준 */
+            position:fixed;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);                      
+            
+            width:600px;
+            height:600px;                     
+            border:1px solid black;
+            padding:20px;
+            overflow:hidden;
+        }
+        .box *{
+            /* 레이아웃 관련 스타일 */
+            
+
+            /* 박스모델 스타일 */
+            width:250px;
+            height:250px;
+            padding:20px;
+
+            /* 컨텐츠관련 스타일 */
+            font-weight:900;
+            font-size:42px;
+            text-align:center;
+            line-height:160px;
+        }
+        .box01{
+            position:absolute;
+            right:0;
+            top:0;
+            z-index:5;
+        }
+        .box02{
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:4;
+        }
+        .box03{
+            position:absolute;
+            left:0;
+            bottom:0;
+            z-index:3;
+        }
+        .box04{
+            position:absolute;
+            right:0;
+            bottom:0;  
+            z-index:2;
+        }
+        .box05{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            z-index:1; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box01" style="background:red;">박스1</div>
+        <div class="box02" style="background:green;">박스2</div>
+        <div class="box03" style="background:blue;">박스3</div>
+        <div class="box04" style="background:cyan;">박스4</div>
+        <div class="box05" style="background:magenta;">박스5</div>
+    </div>
+</body>
+</html>

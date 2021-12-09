@@ -7,7 +7,13 @@
     <link rel="shortcut icon" href="./images/theborn.png" type="image/x-icon">
     <title>더본코리아</title>
     <style>
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
         *{
+            box-sizing:border-box;
             margin:0;
             padding:0;
         }
@@ -23,18 +29,30 @@
             box-shadow:0 2px 2px rgba(0,0,0,0.3);
         }
         .container{
+            position:relative;
             width:960px;
+            height:80px;
             margin:0 auto;            
             padding:30px 0;
         }
         .container:hover{
             border-bottom:1px solid #a73232;
         }
-        .main-logo{float:left;}
-        .nav{float:right;}
+        .main-logo{
+            position:absolute;
+            left:20px;
+            top:50%;
+            transform:translate(0,-50%);
+        }
+        .nav{
+            position:absolute;
+            right:20px;
+            top:50%;
+            transform:translate(0,-50%);
+        }
 
         .nav li{ 
-            float:left;
+            display:inline-block;
             margin-left:20px;                       
             font-weight:600;
             font-size:15px;
@@ -43,6 +61,7 @@
         .nav a:hover{
             color:#a73232;
         }
+        
     </style>
 </head>
 <body>
@@ -55,7 +74,7 @@
                     </a>
                 </h1>
                 <nav class="nav">
-                    <ul>
+                    <ul clear="clearfix">
                         <li><a href="#">더본코리아</a></li>
                         <li><a href="#">브랜드</a></li>
                         <li><a href="#">매장찾기</a></li>
@@ -63,7 +82,7 @@
                         <li><a href="#">더본소식</a></li>
                         <li><a href="#">고객의소리</a></li>
                     </ul>
-                </nav>
+                </nav>                
             </div>
         </header>
     </section>
