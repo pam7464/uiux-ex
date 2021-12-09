@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        h1{text-align:center;}
+        .slider{
+            position:relative;
+            width:1280px;
+            height:600px;
+            margin:50px auto;
+            box-shadow:2px 2px 2px #666;
+            overflow:hidden;
+        }
+        .slide{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            z-index:1;
+        }
+        .slide.active{
+            z-index:5;
+        }
+        .btn-page{
+            position:absolute;
+            left:50%;
+            bottom:40px;
+            transform:translate(-50%,0);
+            z-index:6;
+        }
+        .btn{
+            display:inline-block;
+            width:20px;
+            height:20px;
+            margin:0 10px;
+            border-radius:10px;
+            background:#999;
+            text-indent: -99999px;
+            cursor:pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>슬라이더</h1>
+    <div class="slider">
+        <div class="slide slide01 active">
+            <img src="./images/christmas01.jpg" alt="크리스마스01">
+        </div>
+        <div class="slide slide02">
+            <img src="./images/christmas02.jpg" alt="크리스마스02">
+        </div>
+        <div class="slide slide03">
+            <img src="./images/christmas03.jpg" alt="크리스마스03">
+        </div>
+        <div class="slide slide04">
+            <img src="./images/christmas04.jpg" alt="크리스마스04">
+        </div>
+        <div class="slide slide05">
+            <img src="./images/christmas05.jpg" alt="크리스마스05">
+        </div>
+        <div class="btn-page">
+            <div class="btn btn01">1</div>
+            <div class="btn btn02">2</div>
+            <div class="btn btn03">3</div>
+            <div class="btn btn04">4</div>
+            <div class="btn btn05">5</div>
+        </div>
+    </div>
+</body>
+</html>
