@@ -21,10 +21,12 @@
             left:50%;
             top:50%;
             transform:translate(-50%,-50%);
-            z-index:1;
+            opacity:0;
+            transition:opacity 1s;
+
         }
         .slide.active{
-            z-index:5;
+            opacity:1;
         }
         .btn-page{
             position:absolute;
@@ -50,28 +52,90 @@
 <body>
     <h1>슬라이더</h1>
     <div class="slider">
-        <div class="slide slide01 active">
+        <div class="slide slide01" id="slide01">
             <img src="./images/christmas01.jpg" alt="크리스마스01">
         </div>
-        <div class="slide slide02">
+        <div class="slide slide02" id="slide02">
             <img src="./images/christmas02.jpg" alt="크리스마스02">
         </div>
-        <div class="slide slide03">
+        <div class="slide slide03" id="slide03">
             <img src="./images/christmas03.jpg" alt="크리스마스03">
         </div>
-        <div class="slide slide04">
+        <div class="slide slide04" id="slide04">
             <img src="./images/christmas04.jpg" alt="크리스마스04">
         </div>
-        <div class="slide slide05">
+        <div class="slide slide05 active" id="slide05">
             <img src="./images/christmas05.jpg" alt="크리스마스05">
         </div>
         <div class="btn-page">
-            <div class="btn btn01">1</div>
-            <div class="btn btn02">2</div>
-            <div class="btn btn03">3</div>
-            <div class="btn btn04">4</div>
-            <div class="btn btn05">5</div>
+            <div class="btn btn01" id="btn01">1</div>
+            <div class="btn btn02" id="btn02">2</div>
+            <div class="btn btn03" id="btn03">3</div>
+            <div class="btn btn04" id="btn04">4</div>
+            <div class="btn btn05" id="btn05">5</div>
         </div>
     </div>
+    <script>
+        let slide01 = document.getElementById('slide01');
+        let slide02 = document.getElementById('slide02');
+        let slide03 = document.getElementById('slide03');
+        let slide04 = document.getElementById('slide04');
+        let slide05 = document.getElementById('slide05');
+
+        let btn01 = document.getElementById('btn01');
+        let btn02 = document.getElementById('btn02');
+        let btn03 = document.getElementById('btn03');
+        let btn04 = document.getElementById('btn04');
+        let btn05 = document.getElementById('btn05');
+        
+        // 1번 슬라이드 보기
+        btn01.addEventListener('click',function(){
+            slide01.classList.add('active');
+            slide02.classList.remove('active');
+            slide03.classList.remove('active');
+            slide04.classList.remove('active');
+            slide05.classList.remove('active');
+        });
+
+        // 2번 슬라이드 보기
+        btn02.addEventListener('click',function(){
+            slide01.classList.remove('active');
+            slide02.classList.add('active');
+            slide03.classList.remove('active');
+            slide04.classList.remove('active');
+            slide05.classList.remove('active');
+        });
+
+        // 3번 슬라이드 보기
+        btn03.addEventListener('click',function(){
+            slide01.classList.remove('active');
+            slide02.classList.remove('active');
+            slide03.classList.add('active');
+            slide04.classList.remove('active');
+            slide05.classList.remove('active');
+        });
+
+        // 4번 슬라이드 보기
+        btn04.addEventListener('click',function(){
+            slide01.classList.remove('active');
+            slide02.classList.remove('active');
+            slide03.classList.remove('active');
+            slide04.classList.add('active');
+            slide05.classList.remove('active');
+        });
+
+        // 5번 슬라이드 보기
+        btn05.addEventListener('click',function(){
+            slide01.classList.remove('active');
+            slide02.classList.remove('active');
+            slide03.classList.remove('active');
+            slide04.classList.remove('active');
+            slide05.classList.add('active');
+        });
+
+
+        
+        
+    </script>
 </body>
 </html>
