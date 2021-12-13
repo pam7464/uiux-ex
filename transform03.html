@@ -9,6 +9,12 @@
         *{box-sizing:border-box;margin:0;padding:0;}
         ul,ol,li{list-style:none;}
         a{text-decoration:none;color:#000;}
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+
         .wrap{
             width:100%;
             overflow:hidden;
@@ -52,7 +58,33 @@
             top:72px;
             right:-100%;
             bottom:0;
-            background-color:#f00;
+            background-color:rgba(0,0,0,0.3);
+
+            transition:0.3s;
+        }
+        .nav ul{
+            float:right;
+            width:50%;
+            height:100%;
+            padding:20px;
+            background-color:#000;
+        }        
+        .nav.active{
+            left:0;
+            right:0;
+        }
+
+        .nav li{
+            margin-bottom:30px;
+            font-size:1.4em;
+        }
+        .nav a{
+            color:#fff;
+            transition:0.2s;
+        }
+        .nav a:hover{
+            text-decoration:underline;
+            color:lightblue;
         }
         
 
@@ -62,12 +94,14 @@
     <section class="wrap">
         <header class="header">
             <h1>달나라</h1>
-            <div class="btn-nav">
+            <div class="btn-nav" onclick="
+                document.getElementById('nav').classList.toggle('active');
+            ">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <nav class="nav">
+            <nav class="nav clearfix" id="nav">
                 <ul>
                     <li><a href="#">링크1</a></li>
                     <li><a href="#">링크2</a></li>
@@ -77,6 +111,9 @@
                 </ul>
             </nav>
         </header>
+        <section class="sec sec01">
+            <img src="./images/christmas04.jpg" alt="크리스마스4">
+        </section>
     </section>
 </body>
 </html>
