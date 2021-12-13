@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달나라</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        ul,ol,li{list-style:none;}
+        a{text-decoration:none;color:#000;}
+        .wrap{
+            width:100%;
+            overflow:hidden;
+        }
+        .header{
+            position:relative;
+            padding:20px 12px;
+        }
+
+        h1{
+            text-align:center;
+        }
+        .btn-nav{
+            position:absolute;
+            right:12px;
+            top:50%;
+            transform:translateY(-50%);
+
+            border:1px solid #666;
+            padding:6px;
+            border-radius:2px;
+        }
+        .btn-nav span{
+            display:block;
+            width:20px;
+            height:2px;
+            margin-bottom:4px;
+            background-color:#000;
+        }
+        .btn-nav span:last-child{
+            margin-bottom:0;
+        }
+
+
+
+
+
+        .nav{
+            position:fixed;
+            left:100%;
+            top:72px;
+            right:-100%;
+            bottom:0;
+            background-color:#f00;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <h1>달나라</h1>
+            <div class="btn-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">링크1</a></li>
+                    <li><a href="#">링크2</a></li>
+                    <li><a href="#">링크3</a></li>
+                    <li><a href="#">링크4</a></li>
+                    <li><a href="#">링크5</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+</body>
+</html>
