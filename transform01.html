@@ -27,7 +27,7 @@
             transition:0.5s;
         }
         .box01:hover{
-            transform:rotate(45deg);
+            transform:rotateZ(45deg);
         }
         .box02{
             width:200px;
@@ -36,34 +36,174 @@
 
             transition:1s;
         }
+        .box03{
+            width:300px;
+            height:300px;
+            border:1px solid #000;
+            perspective:300px;
+        }
+        .box03 .child-box{
+            width:100%;
+            height:100%;
+            overflow:hidden; 
+            transition:1s;                      
+        }
+        .box03:hover .child-box{
+            transform:rotateX(360deg); 
+        }
+        .box04,.box05{
+            width:200px;
+            height:200px;                      
+            background-color:#000;
+            font-weight:900;
+            font-size:32px;
+            color:#fff;
+            text-align:center;
+            line-height:200px;
+
+            transition:5s;
+        }
+        .wrap:hover .box04{
+            transform:translate(300px,300px);
+        }
+        .box05{
+            transform:translateX(50%);
+        }
+        .box06{
+            width:600px;
+            height:600px;
+            margin:30px auto;
+            border:2px solid #f00;
+
+            position:relative;
+        }
+        .box06 .child-box{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+
+            width:200px;
+            height:200px;
+            background-color:#f00;
+        }
+        .box07{
+            width:200px;
+            height:200px;
+            background-color:#0f0;
+            transition:0.5s;
+        }
+        .wrap:hover .box07{
+            width:300px;
+            height:300px;
+            border-radius:50%;
+            background-color:#00f;
+            transform: translateX(300px) rotate(180deg);
+        }
+        .box08{
+            width:600px;
+            height:300px;
+            margin:20px auto;
+            overflow:hidden;
+        }
+        .box08 .child-box{
+            transition:0.3s;
+        }
+        .box08:hover .child-box{
+            transform:scale(1.2,1);
+        }
+        .box09{
+            width:640px;
+            margin: 20px auto;
+            border:2px solid #f00;
+            padding:20px;
+        }
+        .box09>div{
+            width:200px;
+            height:200px;
+            margin-right:20px;
+            background-color:black;
+            float:left;
+        }
+        .box09>.child-box03{
+            margin-right:0;
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .box09>.child-box01:hover{
+            transform:rotate(15deg);
+            transform-origin:50px 50px;
+        }
+        .box09>.child-box02:hover{
+            transform:rotate(15deg);
+            transform-origin:center center;
+        }
+        .box09>.child-box03:hover{
+            transform:rotate(15deg);
+            transform-origin:50% 50%;
+        }
+        .box10{
+            width:300px;
+            height:300px;
+            margin:20px auto;
+            border:1px solid black;
+            perspective:600px;
+        }
+        .box10 .rotatey-box{
+            width:100%;
+            height:100%;
+            font-size:50px;
+            text-align:center;
+            line-height:300px;
+            transition:3s;
+            backface-visibility:hidden;
+        }
+        .box10:hover .rotatey-box{
+            transform:rotateY(360deg);
+        }
+
+
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="box01">회전</div>
         <div class="box02" onclick="
-            this.style.transform = 'rotate(-45deg)';
+            this.style.transform = 'rotateZ(-45deg)';
         " ondblclick="
-            this.style.transform = 'rotate(0)';
+            this.style.transform = 'rotateZ(0)';
         ">역회전</div>
-        <div class="box03"></div>
-        <div class="box04"></div>
-        <div class="box05"></div>
-        <div class="box06"></div>
+        <div class="box03">
+            <div class="child-box">
+                <img src="./images/christmas01.jpg" alt="그리스마스1">
+            </div>
+        </div>
+        <div class="box04">이동</div>
+        <div class="box05">이동2</div>
+        <div class="box06">
+            <div class="child-box">
+                가로세로가 운데 맞춤
+            </div>
+        </div>
         <div class="box07"></div>
-        <div class="box08"></div>
-        <div class="box09"></div>
-        <div class="box10"></div>
-        <div class="box11"></div>
-        <div class="box12"></div>
-        <div class="box13"></div>
-        <div class="box14"></div>
-        <div class="box15"></div>
-        <div class="box16"></div>
-        <div class="box17"></div>
-        <div class="box18"></div>
-        <div class="box19"></div>
-        <div class="box20"></div>
+        <div class="box08">
+            <div class="child-box">
+                <img src="./images/christmas02.jpg" alt="크리스마스2">
+            </div>
+        </div>
+        <div class="box09 clearfix">
+            <div class="child-box01">9-1</div>
+            <div class="child-box02">9-2</div>
+            <div class="child-box03">9-3</div>
+        </div>
+        <div class="box10">
+            <div class="rotatey-box">
+                Y축 회전
+            </div>
+        </div>
     </div>
         
 </body>
