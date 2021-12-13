@@ -5,6 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신상품 목록</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        ul,ol,li{list-style:none;}
+        img{width:100%;vertical-align:bottom;}
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+
+        .wrap{
+            width:1200px;
+            margin:0 auto;
+        }
+        .header{
+            padding:20px 16px;
+        }
+        .header h1{
+            font-size:62px;
+            text-align:center;
+        }
+        .sec01{
+            padding:20px 16px;
+        }
+        .sec01 li{
+            position:relative;
+            float:left;
+            width:32%;
+            margin-right:2%;
+            overflow:hidden;
+        }
+        .sec01 li:last-child{
+            margin-right:0;
+        }
+        /* .img-box{} */
+        li .content-box{
+            position:absolute;
+            left:50%;
+            top:150%;
+            transform:translate(-50%,-50%);
+
+            width:80%;
+            color:#fff;
+            transition:0.3s;            
+        }
+        li:hover .content-box{
+            top:50%;
+        }
+
+
+    </style>
 </head>
 <body>
     <section class="wrap">
@@ -12,7 +63,7 @@
             <h1>신상품 목록</h1>
         </header>
         <section class="sec sec01">
-            <ul>
+            <ul class="clearfix">
                 <li>
                     <div class="img-box">
                         <img src="./images/christmas01.jpg" alt="크리스마스1">
