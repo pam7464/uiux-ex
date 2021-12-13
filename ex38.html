@@ -5,10 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스킵메뉴(skip-menu)</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        ul,ol,li{list-style:none;}
+        a{text-decoration:none;color:#000;}
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+
+        .wrap{
+            width:960px;
+            margin:0 auto;
+        }
+        .wrap>*{
+            padding:20px;
+        }
+        .header,.sec02,.footer{
+            background-color:#000;
+            color:#fff;
+        }
+        /* HEADER 스타일 */   
+        .header a{
+            color:inherit;
+        }
+        h1{
+            float:left;
+        }
+        nav{
+            float:right;
+            margin-top:6px
+        }
+        nav li{
+            display:inline-block;
+            margin-left:20px;
+        }
+
+        /* SECTION 스타일 */
+        .sec h2{
+            padding:20px;
+            text-align:center;
+        }
+        .sec p{
+            text-align:justify;
+        }
+        /* FOOTER 스타일 */
+
+
+
+        /* FOCUS 이벤트 */
+        .skip-menu a{
+            position:fixed;
+            left:0;
+            top:-999px;
+            z-index:99999;
+
+            width:300px;
+            border:2px solid #999;
+            padding:6px;
+            border-radius:4px;
+            background-color:#000;
+            font-size:20px;
+            color:#fff;
+            text-align:center;            
+        }
+        .skip-menu a:focus{
+            top:0;
+        }
+    </style>
 </head>
 <body>
+
+    <section class="skip-menu">
+        <ul>
+            <li><a href="#sec01">내 소개 바로가기</a></li>
+            <li><a href="#sec02">내 작품 바로가기</a></li>
+            <li><a href="#sec03">글적글적 게시판 바로가기</a></li>
+        </ul>
+    </section>
+
     <section class="wrap">
-        <header class="header">
+        <header class="header clearfix">
             <h1>스킵메뉴(skip-menu)</h1>
             <nav>
                 <ul>
@@ -68,7 +146,9 @@
                 Eaque sed obcaecati veniam error, similique minima asperiores, laborum iusto reprehenderit numquam aliquid eos. Accusantium ipsa nulla odio saepe autem qui maxime porro unde ea minima voluptate voluptatem, in voluptatibus!
             </p>
         </section>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat voluptatem qui velit consequuntur! Molestias rerum, laborum non neque mollitia ad fuga velit reiciendis a ipsa eius deserunt. Perspiciatis, quo.
+        </footer>
     </section>
 </body>
 </html>
