@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width:960px;
+            margin:20px auto;
+            border:2px solid #000;
+            padding:20px;
+        }
+        .box01{
+            width:200px;
+            height:200px;
+            margin:0;
+            border:2px solid #000;
+            padding:20px;
+            border-radius:20px;
+
+            font-size:50px;
+            text-align:center;
+            line-height:200px; 
+            
+            transition:0.5s;
+        }
+        .box01:hover{
+            transform:rotate(45deg);
+        }
+        .box02{
+            width:200px;
+            height:200px;
+            background-color:#f00;
+
+            transition:1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box01">회전</div>
+        <div class="box02" onclick="
+            this.style.transform = 'rotate(-45deg)';
+        " ondblclick="
+            this.style.transform = 'rotate(0)';
+        ">역회전</div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="box05"></div>
+        <div class="box06"></div>
+        <div class="box07"></div>
+        <div class="box08"></div>
+        <div class="box09"></div>
+        <div class="box10"></div>
+        <div class="box11"></div>
+        <div class="box12"></div>
+        <div class="box13"></div>
+        <div class="box14"></div>
+        <div class="box15"></div>
+        <div class="box16"></div>
+        <div class="box17"></div>
+        <div class="box18"></div>
+        <div class="box19"></div>
+        <div class="box20"></div>
+    </div>
+        
+</body>
+</html>
