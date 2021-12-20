@@ -5,6 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indigo</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .wrap{
+            /* width:100%; */
+            max-width:960px;
+            margin:0 auto;
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .header,.sec,.footer{
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .header,.footer{height:80px;background-color:aqua;}
+        .sec{height:300px;}
+        .main-slider{background-color:rgb(55, 30, 78);}
+        .we-are{background-color:chocolate;}
+        .work{background-color:darkgoldenrod;}
+        .blog{background-color:fuchsia;}
+        .map{background-color:greenyellow;}
+
+        @media (min-width:768px) {
+            .header{height:200px;width:30%;order:1;}
+            .we-are{height:200px;width:70%;order:2;}
+            .main-slider{width:50%;order:3;}
+            .blog{width:50%;order:4;}
+            .work{width:60%;height:400px;order:5;}
+            .map{width:40%;height:400px;order:6;}
+            .footer{order:7;}
+        }
+
+        @media (min-width:960px){
+            .header{width:100%;height:80px;}
+            .sec{width:33.3333%;height:300px;}
+            .work{width:66.6666%;}
+
+        }
+    </style>
 </head>
 <body>
     <div class="wrap">
