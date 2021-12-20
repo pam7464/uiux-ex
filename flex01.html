@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex01</title>
+    <style>
+        *{margin:0;padding:0;}
+        
+        h1{text-align:center;}
+        .par-box{
+            width:1200px;
+            margin:0 auto;
+            border:1px solid black;
+            /* 플렉스 컨테이너 / 플렉서블 박스*/
+            display:flex;
+            /* 주축 가로 */
+            flex-direction:row;
+            /* 주축 가로 꺼꾸로 */
+            /* flex-direction:row-reverse; */            
+            /* 주축 세로 */
+            /* flex-direction:column; */
+            /* 주축 세로 꺼꾸로*/
+            /* flex-direction:column-reverse; */
+            /* 플랙스 컨테이너 줄바꿈 허용여부 */
+            flex-wrap:nowrap;
+            /* flex-wrap:wrap; */
+        }
+        .par-box{
+            height:300px;
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .child-box{
+            display:block;                      
+            width:600px;
+            height:150px;
+        }
+        .child-box01{
+            background-color:#f00;
+        }
+        .child-box02{
+            background-color:#0f0;
+        }
+        .child-box03{
+            background-color:#00f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Container</h1>
+    <div class="par-box clearfix">
+        <div class="child-box child-box01"></div>
+        <div class="child-box child-box02"></div>
+        <div class="child-box child-box03"></div>
+    </div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, sed doloribus eos tempore voluptatum repudiandae nam perferendis eligendi, earum tenetur numquam esse, pariatur asperiores quia temporibus ipsam voluptates soluta aliquid!
+    Beatae, neque, aspernatur quam autem corporis officiis laudantium ut iusto placeat reprehenderit magnam nam provident, a aliquid maiores modi! Vero, repudiandae. Nam alias mollitia est quae dolores veritatis voluptatum consequatur!
+    Earum nobis recusandae quos commodi voluptatem eaque iusto quaerat obcaecati deleniti. A, dignissimos? Facilis quam temporibus tempora voluptates quos unde dignissimos, tempore repellendus qui magnam? Quisquam voluptate unde repellat ducimus!
+    Minima quas maiores totam est cupiditate aut amet. Quae beatae id tenetur quo? Temporibus quasi enim tenetur iusto aut sit voluptatibus reiciendis optio culpa accusamus alias, omnis esse consequuntur ratione.
+    Unde fuga rerum placeat adipisci doloribus perferendis nemo sapiente facilis tenetur quos excepturi dolor nostrum et voluptatibus obcaecati quasi hic recusandae fugiat, nisi laboriosam itaque necessitatibus? Temporibus maiores aut et?
+    Vel deserunt veniam eaque adipisci? Recusandae vel deleniti voluptas quibusdam iste? Asperiores est vel excepturi at aliquid laudantium ipsum dolorem, nostrum dolore autem? Nobis tempora cum sequi et molestiae voluptatem?
+    Incidunt officia ab est ipsum? Possimus nemo fugiat, praesentium autem officia nobis voluptate officiis, iure aperiam labore qui enim, aspernatur similique nostrum laudantium consectetur nisi mollitia repudiandae. Voluptate, fugiat dolorem?
+    Numquam, similique! Labore laudantium ullam molestiae obcaecati reprehenderit, sapiente, alias quam dicta, adipisci sint debitis suscipit quo. Sunt et magnam a, maiores molestias repellendus provident porro, unde odit ex dignissimos.
+    Corrupti ipsum esse placeat assumenda officiis aspernatur vero ullam, vel dolorum tempora non voluptatibus nam unde, at, et maxime omnis dolor tempore quae dolorem. Temporibus at corrupti animi enim molestiae!
+    Quae ratione amet labore vel consectetur est iure itaque tempore ad eaque minus sint, reiciendis recusandae laudantium voluptas? Perspiciatis ex placeat quia ratione aperiam velit nam ipsum omnis odio adipisci?</p>
+</body>
+</html>
