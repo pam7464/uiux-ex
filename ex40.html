@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:600px;
+            height:800px;
+            margin-left:auto;
+            margin-right:auto;
+            background-color:black;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between;
+            align-items:center;
+        }
+        .child-box{
+            width:300px;
+            height:300px;
+            background-color:#f00;
+        }
+        .child-box:last-child{
+            background-color:#00f;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child-box"></div>
+        <div class="child-box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation01</title>
+    <style>
+        h1{text-align:center;}
+        .par-box{
+            position:absolute;
+            left:0;
+            right:0;
+            top:100px;
+            bottom:0;
+            border:10px solid #000;
+            /* animation-name:ani1;
+            animation-duration:0.5s; */
+        }
+        .child-box{
+            width:100px;
+            height:100px;
+            background-color:#00f;
+            /* animation-name:ani2; */
+            /* animation-duration:0.5s;  */
+            /* animation-direction:alternate;  */
+            /* animation-iteration-count:infinite;   */
+            /* animation-timing-function:ease;    */
+            /* animation-delay: 5s;          */
+            /* animation:ani2 0.5s 10 5s alternate ease; */
+            /* animation-play-state:paused; */
+            /* animation-fill-mode: forwards; */
+            animation:ani3 10s forwards paused;
+            
+        }
+        .child-box:hover{
+            animation-play-state:running;
+        }
+        /* 도형변형 */
+        @keyframes ani1 {
+            from{
+                border-radius:0;
+            }
+            to{
+                border-radius:50%;
+            }
+        }
+        /* 이동 */
+        @keyframes ani2 {
+           from{
+                margin-left:0;
+                border-radius:0;
+                background-color:#00f;
+                transform:rotate(0);
+           } 
+           to{
+                margin-left: 600px;
+                border-radius:50%;
+                background-color:#f00;
+                transform:rotate(360deg);
+           }
+        }
+        @keyframes ani3 {
+            from{
+                background-color:#00f;
+            }
+            to{
+                background-color:#f00;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>animation01</h1>
+    <div class="par-box">
+        <div class="child-box"></div>
+    </div>
+</body>
+</html>
