@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid03</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .par-box{
+            width:1200px;
+            margin:0 auto;
+            padding:12px;
+
+            display:grid;
+            grid-template-columns:repeat(16,1fr);
+            column-gap:12px;
+            row-gap:12px;
+        }
+        .child-box{
+            position:relative;
+            /* width:100px; */
+            /* height:60px; */
+            border:3px solid #333;
+            border-radius:10px;
+            background-color:red;
+            font-weight:700;
+            font-size:22px;
+            color:#333;
+            text-shadow:2px 2px 0 rgba(255,255,255,0.5);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .child-box::before{
+            position:absolute;
+            left:6px;
+            top:6px;
+            content:'';
+            display:block;
+            width:6px;
+            height:60%;
+            border-radius:3px;
+            background-color:rgba(255,255,255,0.5);
+        }
+        .child-box01{
+            order:2;
+            grid-column:1/8;
+        }        
+        .child-box02{
+            order:1;
+            grid-column:1/17;
+        }
+        .child-box03{
+            order:3;
+            grid-column:8/17;
+        }
+        .child-box04{
+            order:6;
+            grid-column:5/17;
+        }
+        .child-box05{
+            order:5;
+            grid-column:1/5;
+        }
+        .child-box06{
+            order:4;
+            grid-column:1/17;
+        }
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">1</div>
+        <div class="child-box child-box02">2</div>
+        <div class="child-box child-box03">3</div>
+        <div class="child-box child-box04">4</div>
+        <div class="child-box child-box05">5</div>
+        <div class="child-box child-box06">6</div>
+    </div>
+</body>
+</html>

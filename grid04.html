@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid04</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        .par-box{
+            width:900px;
+            margin:0 auto;
+            padding:12px;
+            background-color:lightcyan;
+            display:grid;
+            grid-template-columns:repeat(8,1fr);
+            grid-auto-rows:80px;
+            /* grid-template-rows: auto 300px auto; */
+            /* column-gap:12px; */
+            /* row-gap:12px; */
+            gap:12px;
+        }
+        .child-box{
+            background-color:darkgreen;
+            font-size:30px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .child-box01{            
+            /* grid-row-start: 1; */
+            /* grid-row-end:2; */
+            /* grid-row:1/2; */
+            /* grid-column-start:1; */
+            /* grid-column-end:9; */
+            /* grid-column:1/9; */
+            grid-area:1/1/2/9;
+
+        }
+        .child-box02{          
+            /* height:172px;  */
+            /* grid-row:2/5; */
+            /* grid-column:1/3;             */
+            grid-area:2/1/5/3;
+        }
+        .child-box03{    
+            /* height:172px;        */
+            /* grid-row:2/4; */
+            /* grid-column:3/9;             */
+            grid-area:2/3/4/9;
+        }
+        .child-box04{
+            /* grid-row:4/5; */
+            /* grid-column:3/9; */
+            grid-area:4/3/5/9;
+        }
+    </style>
+</head>
+<body>
+    <div class="par-box">
+        <div class="child-box child-box01">header</div>
+        <div class="child-box child-box02">aside</div>
+        <div class="child-box child-box03">section</div>
+        <div class="child-box child-box04">footer</div>
+    </div>
+</body>
+</html>

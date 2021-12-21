@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid02</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;}
+        h1{text-align:center;}
+        .par-box{
+            width:960px;            
+            margin:20px auto;
+            padding:0 10px;
+            background-color:lightcoral;
+
+            display:grid;
+            grid-template-columns:repeat(12,1fr);
+            column-gap:20px;
+            grid-template-rows:100px 300px 600px;
+            row-gap:20px;
+        }
+        .blue-box{            
+            height:60px;
+            background-color:blue;
+            grid-column-start:5;
+            grid-column-end:9;
+            align-self: center;
+        }
+        .white-box{
+            height:60px;
+            background-color:#fff;
+            grid-column-start:12;
+            grid-column-end:13;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid02</h1>
+    <div class="par-box">
+        <div class="blue-box"></div>
+        <div class="white-box"></div>
+    </div>
+</body>
+</html>

@@ -33,7 +33,10 @@
             background-color:lightcoral;
 
             display:grid;
+            /* grid-template-columns:1fr 1fr 1fr; */
+            /* grid-template-columns:repeat(12,1fr); */
             grid-template-columns:auto auto auto;
+            column-gap: 20px;
         }
         .grid-item{
             text-align:center;
@@ -52,7 +55,6 @@
         <div class="grid-item grid-item01">그리드아이템1</div>
         <div class="grid-item grid-item02">그리드아이템2</div>
         <div class="grid-item grid-item03">그리드아이템3</div>
-        <div class="grid-item grid-item04">그리드아이템4</div>
     </div>
 </body>
 </html>
