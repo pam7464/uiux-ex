@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid01</title>
+    <style>
+        h1{text-align:center;}
+        .par-box{
+            width:1132px;
+            margin:0 auto;
+            padding:20px;
+            background-color:lightblue;
+
+            display:flex;
+            flex-flow:row nowrap;            
+        }
+        .child-box{
+            flex:1;
+            margin-right:20px;
+            background-color:#fff;
+            text-align:center;
+        }
+        .child-box03{
+            margin-right:0;
+        }
+
+        .grid-container{
+            width:1132px;
+            margin:50px auto;
+            padding:20px;
+            background-color:lightcoral;
+
+            display:grid;
+            grid-template-columns:auto auto auto;
+        }
+        .grid-item{
+            text-align:center;
+            background-color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid</h1>
+    <div class="par-box">
+        <div class="child-box child-box01">박스1</div>
+        <div class="child-box child-box02">박스2</div>
+        <div class="child-box child-box03">박스3</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item grid-item01">그리드아이템1</div>
+        <div class="grid-item grid-item02">그리드아이템2</div>
+        <div class="grid-item grid-item03">그리드아이템3</div>
+        <div class="grid-item grid-item04">그리드아이템4</div>
+    </div>
+</body>
+</html>
